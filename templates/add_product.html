@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ render_field(form.code) }}
+    {{ form.name.label }} {{ form.name(size=50) }}
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
